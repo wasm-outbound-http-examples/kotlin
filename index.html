@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTTP request for Kotlin</title>
+    <script src="browser-example.js"></script>
+</head>
+<body>
+<h2>HTTP Request from inside WASM using Kotlin</h2>
+
+<p>See the output in browser developer console.</p>
+
+<p>Actual code:</p>
+<pre>
+
+import kotlinx.browser.window
+
+fun main() {
+    window.fetch("https://httpbin.org/anything").then {
+        if (it.ok) {
+            it.text().then {
+                println(it)
+                null
+            }
+        }
+        null
+    }
+}
+
+</pre>
+<section>
+    <h4>Info</h4>
+    <ul>
+        <li><a href="https://github.com/wasm-outbound-http-examples/kotlin">Demo source code</a></li>
+        <li>Versions used on the moment of build:<small>
+            Kotlin: <a href="https://github.com/JetBrains/kotlin/tree/v1.9.21">1.9.21 (JRE 21.0.1+12-LTS)</a>,
+            Gradle: <a href="https://github.com/gradle/gradle/tree/v8.5.0">8.5</a>.
+        </small></li>
+    </ul>
+</section>
+<footer><small>Created for (wannabe-awesome) <a href="https://github.com/vasilev/HTTP-request-from-inside-WASM">list</a></small>
+</footer>
+</body>
+</html>
