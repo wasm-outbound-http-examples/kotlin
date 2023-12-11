@@ -1,0 +1,16 @@
+{
+    "name": "Kotlin: HTTP request from WASM",
+    "image": "ubuntu:jammy",
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils": {},
+        "ghcr.io/devcontainers-contrib/features/kotlin-sdkman:2": {}
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "vscjava.vscode-gradle",
+                "fwcd.kotlin"
+            ]
+        }
+    }
+}
