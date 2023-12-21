@@ -1,4 +1,4 @@
-# Use Kotlin to send HTTP(s) requests from inside WASM
+# Use Kotlin to send HTTP(s) requests from inside WASM in Browser
 
 ## Instructions for this devcontainer
 
